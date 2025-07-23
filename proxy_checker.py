@@ -25,7 +25,7 @@ print(Fore.MAGENTA + """
       
 """)
 
-for line in proxies:
+for index, line in enumerate(proxies, start=0):
 
     try:
         control = requests.get(
@@ -48,7 +48,7 @@ with open("online_proxies.txt","w") as online_p:
      
      online_p.writelines(online_proxies)
 
-print(Fore.YELLOW + "\nOnline Proxies saved successfully!")
+print(Fore.YELLOW + f"\n[{index}] Online Proxies saved successfully!")
 
    
 
